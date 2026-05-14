@@ -1,0 +1,38 @@
+{
+  "id": "barnyard-tracker",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "url": {
+        "type": "string",
+        "description": "Scheme MCP server base URL (fallback: SCHEME_MCP_URL env var)."
+      },
+      "hookKey": {
+        "type": ["string", "object"],
+        "description": "X-Agent-Hook-Key shared secret (fallback: SCHEME_AGENT_HOOK_KEY env var)."
+      },
+      "enabled": {
+        "type": "boolean",
+        "description": "Set to false to disable all tracking without removing the plugin."
+      }
+    }
+  },
+  "uiHints": {
+    "url": {
+      "label": "Scheme MCP URL",
+      "help": "Base URL of the Scheme MCP server (e.g. http://localhost:8001). Falls back to SCHEME_MCP_URL env var.",
+      "placeholder": "http://localhost:8001"
+    },
+    "hookKey": {
+      "label": "Agent Hook Key",
+      "help": "Shared secret for the /agent/event endpoint. Falls back to SCHEME_AGENT_HOOK_KEY env var.",
+      "sensitive": true,
+      "placeholder": "your-hook-key"
+    },
+    "enabled": {
+      "label": "Enable Tracking",
+      "help": "Toggle Barnyard agent tracking without removing the plugin."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@openclaw/barnyard-tracker-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Push agent lifecycle events into the Barnyard knowledge graph as TextNodes",
+  "type": "module",
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}
